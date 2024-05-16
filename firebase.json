@@ -11,6 +11,12 @@
         "source": "**",
         "destination": "/index.html"
       }
+    ],
+    "error-pages": [
+      {
+        "responseCode": 404,
+        "file": "/404.html"
+      }
     ]
   }
 }

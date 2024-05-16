@@ -13,6 +13,7 @@ import AddJob from "../pages/employeeDashboard/AddJob";
 import Jobs from "../pages/register/Jobs";
 import JobDetails from "../pages/register/JobDetails";
 import AppliedJobs from "../pages/cadidatesDashboard/AppliedJobs";
+import NotFound from "../pages/Shared/NotFound";
 
 export const router = createBrowserRouter([
     {
@@ -63,7 +64,11 @@ export const router = createBrowserRouter([
                 {
                     path:"/job-details/:id",
                     element:<JobDetails />
-                }
+                },
+                {
+                    path:"*",
+                    element:<NotFound />
+                },
 
             ]
     },
