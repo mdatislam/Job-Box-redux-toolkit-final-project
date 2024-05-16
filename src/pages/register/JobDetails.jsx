@@ -17,7 +17,7 @@ const JobDetails = () => {
   const { id } = useParams()
   //console.log(id)
   const { register, handleSubmit, reset } = useForm()
-  const { data, isLoading } = useGetJobBYIdQuery(id)
+  const { data, isLoading } = useGetJobBYIdQuery(id,{})
   //console.log(data?.jobInfo?.askQuestion)
   //const {data,isLoading}=useGetAppliedJobsQuery(email)
   const [applyJob, { isError }] = useApplyMutation()
@@ -92,7 +92,8 @@ const [replaySend , {status,isSuccess}]=useReplayMutation()
       jobId:_id
     }
     console.log(replayData)
-    replaySend(replayData)     
+    replaySend(replayData)  
+    reset()   
     
   }
   if (isLoading) {
